@@ -13,8 +13,8 @@ class Controller:
 
     def logging(self, e=None):
         hashed = self.model.hash(self.login_view.haslo.value)
-        pass_secret = self.model.pass_secret
-        if hashed == pass_secret:
+        master_secret = self.model.master_secret
+        if hashed == master_secret:
             self.login_view.banner_logged()
             self.login_view.page.clean()
             self.new_page()

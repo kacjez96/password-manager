@@ -7,10 +7,10 @@ from Crypto import Random
 
 # Model
 class Model:
-    def __init__(self, filepath_db="passwords_db.json", filepath_log="pass_secret.json"):
+    def __init__(self, filepath_db="passwords_db.json", filepath_log="master_secret.json"):
         self.__filepath_db = filepath_db
         self.__filepath_log = filepath_log
-        self.pass_secret = self.load_pass_secret()
+        self.master_secret = self.load_master_secret()
         self.passwords = self.load_passwords()
 
         block_size = 16
@@ -21,10 +21,11 @@ class Model:
     def set_key(self, key):
         self.key = key
 
-    def load_pass_secret(self):
+    def load_master_secret(self):
         with open(self.__filepath_log, "r") as file:
             temp_pass = json.load(file)
-            return temp_pass['pass_secret']
+            print(temp_pass)
+            return temp_pass['master_secret']
 
     @staticmethod
     def hash(passwd):
@@ -93,7 +94,7 @@ class Model:
             self.hide_password(index)
 
     def __str__(self):
-        return f"{self.pass_secret}"
+        return f"{self.master_secret}"
 
     def __len__(self):
         return len(self.passwords)
