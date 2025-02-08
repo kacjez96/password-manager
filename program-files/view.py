@@ -6,6 +6,7 @@ from flet import colors
 
 gc.collect()
 
+
 class View(ABC):
     @abstractmethod
     def __init__(self, controller):
