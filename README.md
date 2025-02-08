@@ -3,6 +3,11 @@
 
 App is designed with https://github.com/flet-dev/flet
 
+**Requirements:**
+```bash
+pip install -r requirements.txt
+```
+
 ## Typing master password to enter the app
 ![alt text](screenshots/master_password.png)
 
