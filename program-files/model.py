@@ -4,7 +4,6 @@ import base64
 from Crypto.Cipher import AES
 from Crypto import Random
 
-
 # Model
 class Model:
     def __init__(self, filepath_db="passwords_db.json", filepath_log="master_secret.json"):
