@@ -2,6 +2,7 @@ import flet as ft
 from model import Model
 from view import SignIn, MainView
 
+
 # Controller
 class Controller:
     def __init__(self, page: ft.Page):
