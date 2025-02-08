@@ -23,7 +23,6 @@ class Model:
     def load_master_secret(self):
         with open(self.__filepath_log, "r") as file:
             temp_pass = json.load(file)
-            print(temp_pass)
             return temp_pass['master_secret']
 
     @staticmethod
